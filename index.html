@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPS Figure Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>TPS Figure Studio</h1>
+            <div class="toolbar">
+                <button data-action="add-text">Add Text</button>
+                <button data-action="add-rect">Rectangle</button>
+                <button data-action="add-ellipse">Ellipse</button>
+                <button data-action="add-line">Line</button>
+                <button data-action="add-arrow">Arrow</button>
+                <button data-action="duplicate">Duplicate</button>
+                <button data-action="delete">Delete</button>
+                <button data-action="undo">Undo</button>
+                <button data-action="redo">Redo</button>
+                <button data-action="zoom-in">Zoom In</button>
+                <button data-action="zoom-out">Zoom Out</button>
+                <button data-action="save-json">Save JSON</button>
+                <label class="file-label">
+                    Load JSON<input type="file" id="load-json" accept=".json" hidden>
+                </label>
+                <button data-action="export-png">Export PNG 2x</button>
+            </div>
+        </header>
+        <main>
+            <aside id="sidebar">
+                <h3>Library</h3>
+                <div id="icon-library"></div>
+                <hr>
+                <h3>Templates</h3>
+                <button data-template="pathway">Pathway</button>
+                <button data-template="workflow">Workflow</button>
+                <button data-template="study">Study Design</button>
+            </aside>
+            <div id="canvas-container">
+                <div id="canvas"></div>
+                <div id="selection-layer"></div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
